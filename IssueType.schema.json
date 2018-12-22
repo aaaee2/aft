@@ -1,0 +1,10 @@
+{
+    "title": "IssueSourceProvider",
+    "type": "string",
+    "enum": [
+        "dbb",
+        "lbb",
+        "ubu-cpa",
+        "ubu"
+    ]
+}

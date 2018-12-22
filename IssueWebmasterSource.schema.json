@@ -1,0 +1,8 @@
+{
+    "title": "IssueWebmasterSource",
+    "type": "string",
+    "enum": [
+        "id",
+        "hash"
+    ]
+}
