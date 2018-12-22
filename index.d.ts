@@ -35,6 +35,7 @@ export interface Issue {
         code: number;
         url: string;
     }[];
+    reportUrl: string;
     _meta?: {
         provider?: string;
         device?: string;

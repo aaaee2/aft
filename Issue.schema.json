@@ -9,7 +9,8 @@
         "geo",
         "provider",
         "device",
-        "route"
+        "route",
+        "reportUrl"
     ],
     "properties": {
         "timestamp": {
@@ -81,6 +82,9 @@
                     }
                 }
             }
+        },
+        "reportUrl": {
+            "type": "string"
         },
         "_meta": {
             "type": "object",
