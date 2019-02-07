@@ -65,6 +65,6 @@ export interface Issue {
     reportUrl: string;
     data: IssueContextData | IssueCookieData    // fraud kind specific issue data
     _meta?: {
-        id?: string;
+        id?: number | string;
     };
 }

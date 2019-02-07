@@ -54,4 +54,4 @@ cookieIssue.data.route[0].code = 302;
 cookieIssue.data.route[0].url = 'https://www.com';
 cookieIssue.data._meta.device = 'newdevice';
 
-contextIssue._meta.id = '177';
+contextIssue._meta.id = 177;
