@@ -25,6 +25,7 @@ export type IssueContextData = {
     provider: (IssueContextDataProvider);
     device: (IssueDataDevice);
     route: {
+        shift?: number;     // milliseconds
         code: number;       // HTTP status code 2xx, 3xx
         url: string;
     }[];
