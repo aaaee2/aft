@@ -10,7 +10,7 @@ export type IssueDataDevice = (
     "iPhone 7" | "iPhone 7 Plus" | "iPhone 8" | "iPhone 8 Plus" | "iPhone SE" | "iPhone X" | "Kindle Fire HDX" |
     "LG Optimus L70" | "Microsoft Lumia 550" | "Microsoft Lumia 950" | "Nexus 10" | "Nexus 4" | "Nexus 5" | "Nexus 5X" |
     "Nexus 6" | "Nexus 6P" | "Nexus 7" | "Nokia Lumia 520" | "Nokia N9" | "PC 1366x768" | "Pixel 2" | "Pixel 2 XL" |
-    "<win>" | "<mac>" | "<nix>" | "<mobile>" | "<desktop>"
+    "<desktop>" | "<win>" | "<mac>" | "<nix>" | "<mobile>" | "<android>" | "<ios>"
 );
 
 export type IssueContextDataType = ("dbb" | "lbb" | "ubu-cpa" | "ubu");
