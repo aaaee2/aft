@@ -14,7 +14,7 @@ export type IssueDataDevice = (
 );
 
 export type IssueContextDataType = ("dbb" | "lbb" | "ubu-cpa" | "ubu");
-export type IssueContextDataProvider = ("google" | "yahoo" | "bing" | "yandex" | "mailru");
+export type IssueContextDataProvider = ("google" | "yahoo" | "bing" | "yandex" | "mailru" | "<other>");
 export type IssueContextData = {
     type: (IssueContextDataType);
     geo: {
