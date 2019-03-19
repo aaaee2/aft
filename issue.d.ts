@@ -13,7 +13,7 @@ export type IssueDataDevice = (
     "<desktop>" | "<win>" | "<mac>" | "<nix>" | "<mobile>" | "<android>" | "<ios>"
 );
 
-export type IssueContextDataType = ("dbb" | "lbb" | "ubu-cpa" | "ubu");
+export type IssueContextDataType = ("dbb" | "lbb" | "lbb-l0" | "ubu-cpa" | "ubu" | "check");
 export type IssueContextDataProvider = ("google" | "yahoo" | "bing" | "yandex" | "mailru" | "<other>");
 export type IssueContextData = {
     type: (IssueContextDataType);
