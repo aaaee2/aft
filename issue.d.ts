@@ -59,7 +59,7 @@ export type IssueWebmasterSource = ("id" | "hash");
 export interface Issue {
     detectedAt: number;     // UNUX timestamp
     advertiserId: string;
-    webmaster: {
+    webmaster?: {
         source: (IssueWebmasterSource);
         value: string;
     };
