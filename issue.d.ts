@@ -20,7 +20,7 @@ export type IssueContextData = {
     geo: {
         continent?: string; // GeoIP code, ex. "EU"
         country: string;    // GeoIP iso code, ex. "DE"
-        city: string;       // GeoIP name (en), ex. "Berlin"
+        city?: string;       // GeoIP name (en), ex. "Berlin"
     };
     provider: (IssueContextDataProvider);
     device: (IssueDataDevice);
@@ -41,7 +41,7 @@ export type IssueCookieData = {
     geo?: {
         continent?: string; // GeoIP code, ex. "EU"
         country: string;    // GeoIP iso code, ex. "DE"
-        city: string;       // GeoIP name (en), ex. "Berlin"
+        city?: string;       // GeoIP name (en), ex. "Berlin"
     };
     device: (IssueDataDevice);
     route: {
