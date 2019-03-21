@@ -1,10 +1,10 @@
 /**
  * Admitad Fraud Tracker
  *
- * Issues collecting endpoint data types.
+ * Reports collecting endpoint data types.
  */
 
-export type IssueDataDevice = (
+export type ReportDataDevice = (
     "Blackberry PlayBook" | "BlackBerry Z30" | "Galaxy Note 3" | "Galaxy Note II" | "Galaxy S III" | "Galaxy S5" |
     "Galaxy S8+" | "iPad" | "iPad Mini" | "iPad Pro" | "iPhone 4" | "iPhone 5" | "iPhone 6" | "iPhone 6 Plus" |
     "iPhone 7" | "iPhone 7 Plus" | "iPhone 8" | "iPhone 8 Plus" | "iPhone SE" | "iPhone X" | "Kindle Fire HDX" |
@@ -13,17 +13,17 @@ export type IssueDataDevice = (
     "<desktop>" | "<win>" | "<mac>" | "<nix>" | "<mobile>" | "<android>" | "<ios>"
 );
 
-export type IssueContextDataType = ("dbb" | "lbb" | "lbb-l0" | "ubu-cpa" | "ubu" | "check");
-export type IssueContextDataProvider = ("google" | "yahoo" | "bing" | "yandex" | "mailru" | "<other>");
-export type IssueContextData = {
-    type: (IssueContextDataType);
+export type ReportContextDataType = ("dbb" | "lbb" | "lbb-l0" | "ubu-cpa" | "ubu" | "check");
+export type ReportContextDataProvider = ("google" | "yahoo" | "bing" | "yandex" | "mailru" | "<other>");
+export type ReportContextData = {
+    type: (ReportContextDataType);
     geo: {
         continent?: string; // GeoIP code, ex. "EU"
         country: string;    // GeoIP iso code, ex. "DE"
         city?: string;      // GeoIP name (en), ex. "Berlin"
     };
-    provider: (IssueContextDataProvider);
-    device: (IssueDataDevice);
+    provider: (ReportContextDataProvider);
+    device: (ReportDataDevice);
     route: {
         shift?: number;     // milliseconds
         code: number;       // HTTP status code 2xx, 3xx
@@ -35,15 +35,15 @@ export type IssueContextData = {
     }
 }
 
-export type IssueCookieDataType = ("iframe" | "image" | "script" | "extension" | "embed");
-export type IssueCookieData = {
-    type: (IssueCookieDataType);
+export type ReportCookieDataType = ("iframe" | "image" | "script" | "extension" | "embed");
+export type ReportCookieData = {
+    type: (ReportCookieDataType);
     geo?: {
         continent?: string; // GeoIP code, ex. "EU"
         country: string;    // GeoIP iso code, ex. "DE"
         city?: string;      // GeoIP name (en), ex. "Berlin"
     };
-    device: (IssueDataDevice);
+    device: (ReportDataDevice);
     route: {
         timestamp: number;  // UNUX timestamp
         shift?: number;     // milliseconds
@@ -55,16 +55,16 @@ export type IssueCookieData = {
     }
 }
 
-export type IssueWebmasterSource = ("id" | "hash");
-export interface Issue {
+export type ReportWebmasterSource = ("id" | "hash");
+export interface Report {
     detectedAt: number;     // UNUX timestamp
     advertiserId: string;
     webmaster?: {
-        source: (IssueWebmasterSource);
+        source: (ReportWebmasterSource);
         value: string;
     };
-    reportUrl: string;
-    data: IssueContextData | IssueCookieData    // fraud kind specific issue data
+    url: string;
+    data: ReportContextData | ReportCookieData  // fraud kind specific report data
     _meta?: {
         id?: number | string;
     };
